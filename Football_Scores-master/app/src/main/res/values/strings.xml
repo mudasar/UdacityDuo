@@ -48,8 +48,25 @@
     <string name="away_crest_desc">Away Team</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
-
+    <string name="share_match_desc">Share this match with friends</string>
     <!-- help text -->
     <string name="no_matches">No matches are scheduled</string>
+
+    <!-- strings used in Utilities -->
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+    <string name=""></string>
+
 
 </resources>
