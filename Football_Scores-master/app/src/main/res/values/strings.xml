@@ -53,20 +53,24 @@
     <string name="no_matches">No matches are scheduled</string>
 
     <!-- strings used in Utilities -->
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
-    <string name=""></string>
+       <!-- Util string translations -->
+
+    <string name="series_a_text">Seria A</string>
+    <string name="premierLeague_text">Premier League</string>
+    <string name="uefa_text">UEFA Champions League</string>
+    <string name="primera_text">Primera Division</string>
+    <string name="bundesliga_text">Bundesliga</string>
+    <string name="not_known_league_text">Not known League Please report</string>
+    <string name="group_stage_match_day_6_text">Group Stages, Matchday : 6</string>
+    <string name="first_knockout_round_text">First Knockout round</string>
+    <string name="quaterfinal_text">QuarterFinal</string>
+    <string name="semifinal_day_text">SemiFinal</string>
+    <string name="final_day_text">Final</string>
+    <string name="match_day_text">Matchday</string>
+
+    <array name="values">
+        <item name="test">test</item>
+    </array>
 
 
 </resources>
