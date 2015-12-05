@@ -1,4 +1,4 @@
-package it.jaschke.alexandria;
+package it.jaschke.alexandria.CameraPreview;
 
 import net.sourceforge.zbar.Config;
 import net.sourceforge.zbar.Image;
@@ -15,8 +15,7 @@ import android.os.Handler;
 import android.widget.FrameLayout;
 
 
-import it.jaschke.alexandria.CameraPreview.CameraPreview;
-
+import it.jaschke.alexandria.R;
 
 
 public class BarcodeActivity extends Activity {

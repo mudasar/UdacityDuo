@@ -44,7 +44,7 @@
             android:exported="false" >
         </service>
 
-        <activity android:name=".BarcodeActivity" >
+        <activity android:name=".CameraPreview.BarcodeActivity" >
         </activity>
     </application>
 
