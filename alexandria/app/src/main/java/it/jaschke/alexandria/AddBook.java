@@ -10,6 +10,7 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,14 +19,17 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
-import it.jaschke.alexandria.CameraPreview.BarcodeActivity;
+import it.jaschke.alexandria.CameraPreview.CaptureActivity;
+import it.jaschke.alexandria.CameraPreview.Intents;
 import it.jaschke.alexandria.data.AlexandriaContract;
 import it.jaschke.alexandria.services.BookService;
 import it.jaschke.alexandria.services.DownloadImage;
 
 
 public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
+
+    private static final String LOG_TAG = AddBook.class.getName();
+    public static final int REQUEST_CODE = 1;
     private static final String TAG = "INTENT_TO_SCAN_ACTIVITY";
     private EditText ean;
     private final int LOADER_ID = 1;
@@ -97,7 +101,7 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
                 // are using an external app.
                 //when you're done, remove the toast below.
                 Context context = getActivity();
-                startActivityForResult(new Intent(getActivity(),BarcodeActivity.class),1);
+                startActivityForResult(new Intent(getActivity(), CaptureActivity.class),1);
 
 //                CharSequence text = "This button should let you scan a book for its barcode!";
 //                int duration = Toast.LENGTH_SHORT;
@@ -216,13 +220,12 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1){
-            String barcode = data.getStringExtra("BARCODE");
-            if (barcode.equals("NULL")){
-            // no barcode was identified
-            }else{
-                //just set it in the textbox
-                ean.setText(barcode);
+        Log.e(LOG_TAG, Integer.toString(requestCode) );
+        Log.d(LOG_TAG, Integer.toString(resultCode) );
+        if (requestCode == REQUEST_CODE) {
+            if (resultCode == Activity.RESULT_OK) {
+                Log.d(TAG, data.getStringExtra(Intents.Scan.RESULT));
+                ean.setText(data.getStringExtra(Intents.Scan.RESULT));
             }
         }
     }
